@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Dev Board</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -33,7 +33,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
       </div>
       <div class="flex items-center space-x-4">
         <div><img src="assets/checkbox.png" alt=""></div>
-        <button class="font-bold text-blue-600">23</button>
+        <button id="total-number" class="font-bold text-blue-600">23</button>
         <button><img src="assets/theme-btn.png" alt="" srcset=""></button>
       </div>
     </div>
@@ -52,7 +52,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               <img src="assets/checkbox.png" alt="">
               <div>
                 <h3>Task Assigned</h3>
-                <h3 class="font-bold te">6</h3>
+                <h3 id="Task-number" class="font-bold te">6</h3>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
           <div
             class="background p-4 flex items-center justify-center col-span-2">
             <img src="assets/board.png" alt="">
-            <button><span class=" font-semibold">Discover Something New Today!</span></button>
+            <button><span class=" font-semibold"><a href="desk.html">Discover Something New Today!</a></span></button>
           </div>
 
           <div class="bg-white shadow-md rounded-lg p-4 flex items-center">
@@ -78,7 +78,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               and ensure onClick works properly</p>
             <div class="flex justify-between mt-4 items-center">
               <p class="text-gray-500 text-sm mt-2">Deadline: <br>1 March 2025</p>
-              <button onclick="disable(this)" id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
+              <button  onclick="disable(this)" id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
             </div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md">
@@ -88,7 +88,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               variables dynamically, and apply a smooth transition effect.</p>
             <div class="flex justify-between mt-4 items-center">
               <p class="text-gray-500 text-sm mt-2">Deadline: <br> 5 March 2025</p>
-              <button onclick="disable(this)" class="btn btn-primary btn-sm mt-2">Completed</button>
+              <button onclick="disable(this)" id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
             </div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md">
@@ -99,7 +99,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               and ensure onClick works properly</p>
             <div class="flex justify-between mt-4">
               <p class="text-gray-500 text-sm mt-2 items-center">Deadline: <br> 11 March 2025</p>
-              <button onclick="disable(this)" class="btn btn-primary btn-sm mt-2">Completed</button>
+              <button onclick="disable(this)" id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
             </div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md">
@@ -110,7 +110,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               and ensure onClick works properly</p>
             <div class="flex justify-between mt-4 items-center">
               <p class="text-gray-500 text-sm mt-2 items-center">Deadline: <br> 21 March 2025</p>
-              <button onclick="disable(this)" class="btn btn-primary btn-sm mt-2">Completed</button>
+              <button onclick="disable(this)"id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
             </div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md">
@@ -121,7 +121,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               and ensure onClick works properly</p>
             <div class="flex justify-between mt-4 items-center">
               <p class="text-gray-500 text-sm mt-2 ">Deadline: <br> 20 March 2025</p>
-              <button onclick="disable(this)" class="btn btn-primary btn-sm mt-2">Completed</button>
+              <button onclick="disable(this)" id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
             </div>
           </div>
           <div class="bg-white p-4 rounded-lg shadow-md">
@@ -132,7 +132,7 @@ background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250
               and ensure onClick works properly</p>
             <div class="flex justify-between mt-4 items-center">
               <p class="text-gray-500 text-sm mt-2">Deadline: <br>21 March 2025</p>
-              <button onclick="disable(this)" class="btn btn-primary btn-sm mt-2">Completed</button>
+              <button onclick="disable(this)" id="complete" class="btn btn-primary btn-sm mt-2">Completed</button>
             </div>
           </div>
         </div>
