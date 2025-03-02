@@ -1,10 +1,17 @@
 function disable(x) {
   if ((x.disabled = true)) {
     alert('Board update succefully');
+   
+  
   } else {
     alert('not');
+     disableButton();
   }
 }
+function disableButton() {
+  alert('hello')
+  document.getElementsByClassName('disable-btn').disabled = true;
+}  
 
 const button = document.getElementById('colorButton');
 let clickCount = 0;
@@ -16,6 +23,11 @@ const colors = [
   '#FF33A1',
   '#A133FF',
   '#33FFF5',
+  '#CD5C5C',
+  '#FFA07A',
+  '#FF7F50',
+  '#6495ED',
+  '#CCCCFF',
 ];
 
 button.addEventListener('click', function () {
@@ -36,7 +48,7 @@ for (let btn of quantityElement) {
 }
 
 const quantityElemen = document.querySelectorAll('#complete');
-for (let btn of quantityElement) {
+for (let btn of quantityElemen) {
   btn.addEventListener('click', function (event) {
     const amout = event.target.innertext === '+' ? 1 : -1;
     const quantity = document.getElementById('Task-number');
@@ -134,6 +146,20 @@ document.getElementById('clear-history').addEventListener('click', function () {
   clearEntries.forEach(entry => entry.remove());
 });
 
+//    function showFast() {
+//      alert('Board update succefully');
+
+     
+//      showSecondAlert();
+//    }
+
+//    function showSecondAlert() {
+//      alert('congratulations!! You have completed at the current Task');
+// }
+   
+
+  
+  
 
 
 
