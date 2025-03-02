@@ -125,6 +125,17 @@ setTimes();
 
 
 
+// clear History
+
+document.getElementById('clear-history').addEventListener('click', function () {
+  let clearContainer = document.getElementById('activity-log');
+  let clearEntries = clearContainer.querySelectorAll('.log-entry');
+
+  clearEntries.forEach(entry => entry.remove());
+});
+
+
+
 
         
        
