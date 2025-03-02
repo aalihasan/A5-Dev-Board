@@ -1,23 +1,38 @@
 function disable(x) {
-  if (x.disabled = true) {
-    alert('Board update succefully')
-   
-    
-  }
-  else {
-    alert('not')
+  if ((x.disabled = true)) {
+    alert('Board update succefully');
+  } else {
+    alert('not');
   }
 }
 
+const button = document.getElementById('colorButton');
+let clickCount = 0;
+
+const colors = [
+  '#FF5733',
+  '#33FF57',
+  '#3357FF',
+  '#FF33A1',
+  '#A133FF',
+  '#33FFF5',
+];
+
+button.addEventListener('click', function () {
+  clickCount++;
+  const colorIndex = (clickCount - 1) % colors.length;
+  document.body.style.backgroundColor = colors[colorIndex];
+});
+
 const quantityElement = document.querySelectorAll('#complete');
 for (let btn of quantityElement) {
-  btn.addEventListener("click", function (event) {
-    const amout = event.target.innertext === "+" ? 1 : -1;
+  btn.addEventListener('click', function (event) {
+    const amout = event.target.innertext === '+' ? 1 : -1;
     const quantity = document.getElementById('total-number');
     const current = parseInt(quantity.innerText);
     const newQuantity = Math.max(0, current - amout);
     quantity.innerText = newQuantity;
-  })
+  });
 }
 
 const quantityElemen = document.querySelectorAll('#complete');
@@ -33,14 +48,14 @@ for (let btn of quantityElement) {
 const showed = document.getElementsByClassName('fix-mobile');
 for (let showing of showed) {
   showing.addEventListener('click', function () {
-    document.getElementById('show').classList.remove("hidden")
-  })
+    document.getElementById('show').classList.remove('hidden');
+  });
 }
 const payed = document.getElementsByClassName('add-pay');
 for (let showing of payed) {
   showing.addEventListener('click', function () {
     document.getElementById('Pay').classList.remove('hidden');
-  })
+  });
 }
 const reactions = document.getElementsByClassName('reaction');
 for (let showing of reactions) {
@@ -67,9 +82,50 @@ for (let showing of reviews) {
   });
 }
 
-const clearHistory = document.getElementById('clear');
-for (let clears of clearHistory) {
-  clears.addEventListener('click', function () {
-    document.getElementsByClassName('fix-mobile').classList.remove;
-  })
-}
+//  current date 
+
+const currentDate = new Date();
+const options = {
+  weekday: 'short',
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+};
+const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+document.getElementById('currentDate').textContent = formattedDate;
+
+
+// current time
+
+
+
+ function getFormattedTime() {
+   const currentTime = new Date();
+   const hours = currentTime.getHours();
+   const minutes = currentTime.getMinutes();
+   const seconds = currentTime.getSeconds();
+   return `${hours % 12 || 12}:${String(minutes).padStart(2, '0')}:${String(
+     seconds
+   ).padStart(2, '0')} ${hours >= 12 ? 'PM' : 'AM'}`;
+ }
+
+ function setTimes() {
+   const timeIds = ['time1', 'time2', 'time3', 'time4', 'time5', 'time6'];
+   const formattedTime = getFormattedTime();
+
+   timeIds.forEach(id => {
+     document.getElementById(id).textContent = formattedTime;
+   });
+
+ }
+
+setTimes();
+ 
+
+
+
+
+        
+       
+

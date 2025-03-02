@@ -41,10 +41,11 @@
       <div class="flex items-center space-x-4">
         <div><img src="assets/checkbox.png" alt=""></div>
         <button id="total-number" class="font-bold text-blue-600">23</button>
-        <button><img src="assets/theme-btn.png" alt="" srcset=""></button>
+        <button id="colorButton" ><img  src="assets/theme-btn.png" alt="" srcset=""></button>
       </div>
     </div>
   </section>
+  <h1 class="bg"></h1>
 
   <!-- main section  -->
 
@@ -69,9 +70,10 @@
             <button><span class=" font-semibold text-white"><a href="desk.html">Discover Something New Today!</a></span></button>
           </div>
 
-          <div class="bg-white shadow-md rounded-lg p-4 flex items-center">
-            <img src="assets/calender.png" alt="">
-            <span class="ml-2 text-lg font-bold ">WED, <br> Feb 28 2025</span>
+          <div class="bg-white shadow-md rounded-lg p-4 flex items-center space-y-2">
+            <div class="mr-3"><img src="assets/calender.png" alt=""></div>
+            
+            <div id="currentDate"></div>
           </div>
         </div>
 
@@ -150,25 +152,25 @@
             <div><img src="assets/activity.png" alt=""></div>
             <div><h2 class="text-lg font-semibold "> Activity Log</h2></div>
           </div>
-          <button id="clear" class="btn btn-primary btn-sm mt-2 ">Clear History</button>
+          <button id="clear " class="btn btn-primary btn-sm mt-2 ">Clear History</button>
           <section>
             <section class=" mb-5">
-              <h1 id="show" class=" hidden"> You have complete the task Fix Mobile Button Issue at 4:50 am</h1>
+              <h1 id="show" class=" hidden"> You have complete the task Fix Mobile Button Issue at <span id="time1"></span></h1>
             </section>
             <section class=" mb-5">
-              <h1 id="Pay" class=" hidden"> You have complete the task Fix Add Pay Success Modal at 3:32 pm</h1>
+              <h1 id="Pay" class=" hidden"> You have complete the task Fix Add Pay Success Modal at <span id="time2"></span></h1>
             </section>
             <section class=" mb-5">
-              <h1 id="reaction" class=" hidden"> You have complete the task Add new reaction 🙌 at 6:21 pm</h1>
+              <h1 id="reaction" class=" hidden"> You have complete the task Add new reaction 🙌 at <span id="time3"></span></h1>
             </section>
             <section class=" mb-5">
-              <h1 id="video" class=" hidden"> You have complete the task Fix Video Loading Issue at 7:55 pm</h1>
+              <h1 id="video" class=" hidden"> You have complete the task Fix Video Loading Issue at <span id="time4"></span></h1>
             </section>
             <section class=" mb-5">
-              <h1 id="integrate" class=" hidden"> You have complete the task Integrate AI Search at 8:50 pm</h1>
+              <h1 id="integrate" class=" hidden"> You have complete the task Integrate AI Search at <span id="time5"></span></h1>
             </section>
             <section class=" mb-5">
-              <h1 id="review" class=" hidden"> You have complete the task Review Ami Probashi Site at 9:10 pm</h1>
+              <h1 id="review" class=" hidden"> You have complete the task Review Ami Probashi Site at <span id="time6"></span></h1>
             </section>
           </section>
         </div>
@@ -178,10 +180,6 @@
     </div>
   </section>
 
-
-
-
-  
 
   <script src="js/script.js""></script>
 
