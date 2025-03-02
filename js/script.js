@@ -30,6 +30,8 @@ const colors = [
   '#CCCCFF',
 ];
 
+// color section 
+
 button.addEventListener('click', function () {
   clickCount++;
   const colorIndex = (clickCount - 1) % colors.length;
@@ -57,6 +59,21 @@ for (let btn of quantityElemen) {
     quantity.innerText = newQuantity;
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const showed = document.getElementsByClassName('fix-mobile');
 for (let showing of showed) {
   showing.addEventListener('click', function () {
